@@ -1,0 +1,303 @@
+/* Default font for site */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* animation for brand name */
+@keyframes spinOnClick {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.brand-name {
+    color: #ffa500;
+    font-size: 20px;
+    cursor: pointer; 
+    transition: transform 0.5s ease; 
+    display: inline-block; 
+    outline: none; 
+}
+
+
+.brand-name:active {
+    animation: spinOnClick 0.5s ease-in-out;
+}
+/* animation for brand name */
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Active page */
+nav li a.active {
+    color: orange;
+}
+
+/* Hovered page */
+nav li a:hover {
+    color: darkorange;
+}
+
+@media screen and (max-width: 600px) {
+    .brand-name, nav ul {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    nav {
+        display: block;
+    }
+}
+
+
+/* Header on main page*/
+.baner {
+    text-align: center; 
+    padding: 50px 20px;
+
+    /* temporary - helps text be seen */
+    background-color: #8F0018; 
+
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white; 
+}
+
+/* Button Styles */
+
+.btn {
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    text-decoration: none;
+    /* makes corners on button round */
+    border-radius: 20px; 
+}
+
+/* Orange button */
+.btn-playstore {
+    background-color: orange;
+    color: white;
+}
+
+/* Clear button */
+.btn-appstore {
+    background-color: transparent; 
+    border: 2px solid white; 
+}
+
+.btn:hover {
+    opacity: 0.8; 
+}
+
+
+
+/*******************************
+
+        CONTACT PAGE
+
+********************************/
+
+.contact-section {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    margin-top: 20px;
+}
+
+#contact-form {
+    max-width: 600px; 
+    margin: auto; 
+    padding: 20px;
+    background: #fff; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    /* round button */
+    border-radius: 8px; 
+}
+
+.form-group {
+    margin-bottom: 15px; 
+    /* Spacing between form fields */
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ddd; 
+    /* Subtle border */
+    border-radius: 4px; 
+    /* Rounded corners */
+}
+
+.form-group textarea {
+    resize: vertical; 
+    /* Allow vertical resize only */
+}
+
+button[type="submit"] {
+    background:orange; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+    /* Pointer cursor on hover */
+    transition: 0.3s; 
+    /* Smooth transition for hover effect */
+}
+
+button[type="submit"]:hover {
+    background: darkorange; 
+    /* Darker shade for hover effect */
+}
+
+
+/*******************************
+
+        FAQ PAGE
+
+********************************/
+
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.faq-section h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid orange;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.faq h2 {
+    background: orange;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    margin: -1px;
+}
+
+.faq p {
+    background: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+
+/*******************************
+
+        PRODUCTS PAGE
+
+********************************/
+
+.products-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product h2 {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .baner {
+        padding: 50px 10px; /* Less padding on smaller screens */
+    }
+
+    .baner h1 {
+        font-size: 24px; /* Smaller font size for the heading */
+    }
+
+    .baner p {
+        font-size: 16px; /* Adjust paragraph font size as needed */
+    }
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
